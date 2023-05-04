@@ -80,11 +80,12 @@ body {
 }
 
 .giftimg {
-  width: 20%;
-  height: 20em;
+  width: 287px;
+  height: 380px;
   margin: 1rem;
   border-radius: 20px;
   object-fit: cover;
+  box-shadow: 3px 3px 2px 0px rgba(162, 152, 152, 0.7), 0px 2px 4px 0px rgba(128, 128, 128, 0.5);
 }
 
 .titlegift {
@@ -118,31 +119,31 @@ a {
   font-weight: bold;
 }
 
-.back{
-    width: 100%;
-    height: 2em;
-    background-color:#354657;
-    margin-top: 2em;
-    display: flex;
+.back {
+  width: 100%;
+  height: 2em;
+  background-color: #354657;
+  margin-top: 2em;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.colora{
-    color:white;
-    text-decoration: underline;
+.colora {
+  color: white;
+  text-decoration: underline;
 }
 
-footer{
-    text-align: center;
-    background-color: #222f3e;
-    width: 100%;
-    height: 10em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+footer {
+  text-align: center;
+  background-color: #222f3e;
+  width: 100%;
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-footer img{
-    width: 10em;
+footer img {
+  width: 10em;
 }
