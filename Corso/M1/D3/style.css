@@ -29,6 +29,7 @@ body {
 .navbar span {
   margin-left: 1.2em;
   color: white;
+  cursor: pointer;
 }
 
 /* ! ORANGE LINE */
@@ -80,6 +81,10 @@ body {
   margin-top: 2em;
 }
 
+.giftdiv div{
+  padding: 1.2em;
+}
+
 .giftdiv span {
   padding: 1em;
   font-weight: 600;
@@ -93,11 +98,11 @@ a {
 }
 
 .giftdiv img {
-  width: 21%;
+  width: 19vw;
   border-radius: 2em;
   object-fit: cover;
-  height: 22em;
-  margin: 1.5em;
+  height: 25vw;
+  margin: 2em;
   box-shadow: 3px 3px 2px 0px rgba(162, 152, 152, 0.7),
     0px 2px 4px 0px rgba(128, 128, 128, 0.5);
 }
@@ -114,6 +119,10 @@ main {
   display: inline-block;
   margin: 1.1em;
   padding: 1em;
+}
+
+.white img{
+  cursor: pointer;
 }
 
 .titleamz {
