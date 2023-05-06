@@ -4,6 +4,11 @@ body {
   margin: 0;
 }
 
+*{
+  transition: all 0.2s cubic-bezier(.215, .61, .355, 1);
+  scroll-behavior: s;
+}
+
 /* ! LOGO */
 
 .logo {
@@ -74,15 +79,15 @@ body {
 /* ! GIFT DIV */
 
 .giftdiv {
-  width: 98.5%;
-  margin: auto;
+  width: 100;
+  margin: 1em;
   background-color: white;
   padding-top: 1em;
   margin-top: 2em;
 }
 
 .giftdiv div{
-  padding: 1.2em;
+  padding: 0.4em;
 }
 
 .giftdiv span {
@@ -99,12 +104,25 @@ a {
 
 .giftdiv img {
   width: 19vw;
-  border-radius: 2em;
+  border-radius: 1em;
   object-fit: cover;
   height: 25vw;
-  margin: 2em;
+  margin: 2%;
   box-shadow: 3px 3px 2px 0px rgba(162, 152, 152, 0.7),
     0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+@media (min-width: 1500px) {
+  
+  .giftdiv img {
+    width: 19vw;
+    border-radius: 2em;
+    object-fit: cover;
+    height: 25vw;
+    margin: 3em;
+    box-shadow: 3px 3px 2px 0px rgba(162, 152, 152, 0.7),
+    
+  }
 }
 
 /* ! DIV D4 */
@@ -115,10 +133,25 @@ main {
 
 .white {
   background-color: white;
-  width: 20%;
+  width: 21%;
   display: inline-block;
-  margin: 1.1em;
+  margin: 0.66em;
   padding: 1em;
+}
+
+@media (min-width: 1500px)
+{
+  .white {
+    background-color: white;
+    width: 21%;
+    display: inline-block;
+    margin: 1em;
+    padding: 1em;
+  }
+
+  .white{
+    margin-left: 1.5em;
+  }
 }
 
 .white img{
