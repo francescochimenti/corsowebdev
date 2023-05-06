@@ -1,8 +1,10 @@
 body {
-  margin: 0;
-  background: #eaeded;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #eaeded;
+  margin: 0;
 }
+
+/* ! LOGO */
 
 .logo {
   width: 100%;
@@ -10,114 +12,170 @@ body {
 }
 
 .logo img {
-  width: 5rem;
-  margin-left: 2.3em;
-  padding: 0.3em 0;
+  width: 10%;
+  padding: 0.7em;
+  margin-left: 1em;
 }
 
-.navBar {
+/* ! NAVBAR */
+
+.navbar {
   width: 100%;
   background-color: #354657;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 
-.navUl {
-  margin: 0;
+.navbar span {
+  margin-left: 1.2em;
   color: white;
-  display: flex;
-  list-style: none;
-  margin-left: -1em;
 }
 
-.navUl li {
-  margin: 0 0.6em;
-  font-size: 1em;
-}
+/* ! ORANGE LINE */
 
-.shop {
+.orangediv {
   width: 100%;
-  margin: 2em 0;
 }
-
-.inShop {
-  width: 91%;
+.orangedivdiv {
+  width: 98.5%;
+  text-align: center;
   background-color: #f56600;
-  margin: auto;
-}
-
-.inShop p {
   color: white;
-  padding: 0.3em;
-  text-align: center;
-}
-
-.holiday {
-  width: 91%;
-  background-size: 92%;
-  height: 12.2em;
-  margin: auto;
-  background-image: url(../D3/assets/bg-image.png);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.holiday h1 {
-  color: white;
-  font-size: 1.5rem;
-}
-
-.holiday p {
-  color: white;
-}
-
-.gift {
-  background-color: white;
-  width: 91%;
-  text-align: center;
   margin: auto;
   margin-top: 2em;
 }
 
-.giftimg {
-  width: 287px;
-  height: 380px;
-  margin: 1rem;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 3px 3px 2px 0px rgba(162, 152, 152, 0.7), 0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+.orangediv p {
+  padding: 0.5em;
 }
 
-.titlegift {
-  text-align: left;
-  padding: 1rem 1rem 0 1.5rem;
+/* ! GREEN IMG */
+
+.greenimg {
+  background-image: url(../D3/assets/bg-image.png);
+  background-size: 92%;
+  height: 12em;
+  text-align: center;
+  color: white;
+  width: 98.5%;
+  margin: auto;
 }
 
-.titlegift span {
+.greenimg h1 {
+  padding-top: 2em;
+  font-weight: bold;
+}
+
+.greenimg p {
+  font-weight: bold;
+}
+
+/* ! GIFT DIV */
+
+.giftdiv {
+  width: 98.5%;
+  margin: auto;
+  background-color: white;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+
+.giftdiv span {
+  padding: 1em;
+  font-weight: 600;
   font-size: 1.2em;
 }
 
 a {
   text-decoration: none;
-  color: steelblue;
-  font-size: 0.8em;
+  color: #4a91a2;
+  font-weight: bold;
 }
 
+.giftdiv img {
+  width: 21%;
+  border-radius: 2em;
+  object-fit: cover;
+  height: 22em;
+  margin: 1.5em;
+  box-shadow: 3px 3px 2px 0px rgba(162, 152, 152, 0.7),
+    0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+}
+
+/* ! DIV D4 */
+
+main {
+  width: 100%;
+}
+
+.white {
+  background-color: white;
+  width: 20%;
+  display: inline-block;
+  margin: 1.1em;
+  padding: 1em;
+}
+
+.titleamz {
+  margin-top: -1em;
+  margin-left: 1em;
+}
+
+.row2 {
+  width: 100%;
+}
+
+.rowimg {
+  width: 45%;
+  display: inline-block;
+  position: relative;
+  margin: 0.3em;
+}
+
+.rowimg p {
+  margin: 0;
+}
+
+.rowimg img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footerrow {
+  padding-top: 1.5em;
+  padding-left: 0.5em;
+}
+
+.footerrow a {
+  font-weight: 400;
+}
+
+img.new {
+  position: absolute;
+  right: -0.8em;
+  bottom: 0px;
+  width: 40%;
+}
+
+/* ! DOUBLE DIV */
 .doublediv {
-  margin: auto;
-  width: 91%;
+  width: 100%;
   padding-top: 2rem;
   text-align: center;
 }
 
 .doublediv img {
-  width: 100%;
+  width: 98%;
+  margin: auto;
 }
 
 .titleimg {
   text-align: center;
   font-weight: bold;
 }
+
+/* ! BACK */
 
 .back {
   width: 100%;
@@ -133,6 +191,8 @@ a {
   color: white;
   text-decoration: underline;
 }
+
+/* ! FOOTER */
 
 footer {
   text-align: center;
