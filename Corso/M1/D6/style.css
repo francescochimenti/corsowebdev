@@ -1,0 +1,118 @@
+/* ! Helpers */
+
+*
+{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ! Style */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ! Content */
+
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  background-color: black;
+  position: absolute;
+  width: 23em;
+  height: 33em;
+  opacity: 0;
+  z-index: 2;
+  border-radius: 2em;
+  transition: opacity 0.5s linear;
+}
+
+.hero img{
+  width: 23em;
+  height: 33em;
+  object-fit: cover;
+  border-radius: 2em;
+}
+
+.hero-search{
+  width: 4.5em;
+  padding: 1em;
+  font-size: 1.2em;
+  border-radius: 980px;
+  background-color: red;
+  color:white;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 3;
+}
+
+.hero-icon{
+  position: absolute;
+  bottom: -1em;
+  font-size: 1.2em;
+  z-index: 3;
+}
+
+.hero-icon .hero-icon-fit{
+  display: inline-block;
+  margin: 2em 0.7em;
+  padding: 0.7em;
+  color: black;
+  background: white;
+  border-radius: 980px;
+}
+
+.hero-icon .hero-icon-fit span{
+  margin-left: 0.7em;
+}
+
+/* ! Hover */
+
+.hero:hover .overlay {
+  opacity: 0.5;
+}
+
+.hero-search,
+.hero-icon,
+.hero-icon .hero-icon-fit span {
+  opacity: 0;
+  transition: opacity 0.3s linear, transform 0.8s linear;
+}
+
+.hero-search {
+  transform: translateY(-50px);
+}
+
+.hero-icon {
+  transform: translateY(50px);
+}
+
+.hero:hover .hero-search,
+.hero:hover .hero-icon,
+.hero:hover .hero-icon .hero-icon-fit span {
+  opacity: 1;
+}
+
+.hero:hover .hero-search {
+  transform: translateY(0);
+}
+
+.hero:hover .hero-icon {
+  transform: translateY(0);
+}
+

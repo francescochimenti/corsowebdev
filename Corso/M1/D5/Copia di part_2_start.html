@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Esercizio D5</title>
     <style>
       .container {
         margin-left: 4rem;
         margin-top: 4rem;
         font-size: 0;
       }
+
       .container div {
         width: 70px;
         height: 60px;
@@ -20,49 +21,45 @@
         font-size: 1rem;
       }
 
-      div:nth-of-type(even) {
+      .container div:nth-of-type(even) {
         border: 1px solid red;
       }
 
-      div:nth-of-type(odd) > span:nth-of-type(even) {
+      .container div:nth-of-type(odd) > span:nth-of-type(even) {
         color: green;
       }
 
-      div:nth-of-type(2) > span:last-of-type {
+      .container div:nth-of-type(2) > span:last-of-type {
         color: blue;
       }
 
-      div:nth-of-type(6) > span:not( :last-of-type) {
+      .container div:nth-of-type(6) > span:not(:last-of-type) {
         color: yellow;
       }
 
-      .container div > span:first-of-type{
+      .container div > span:first-of-type {
         position: absolute;
         top: 60px;
         right: 30px;
       }
 
-      .container div > span:nth-child(2){
+      .container div > span:nth-child(2) {
         position: absolute;
         right: 30px;
         top: -20px;
       }
 
-      .container div:last-of-type > span:last-of-type{
+      .container div:last-of-type > span:last-of-type {
         position: absolute;
         left: 80px;
         top: 20px;
       }
 
-      .container div:first-of-type > span:last-of-type{
+      .container div:first-of-type > span:last-of-type {
         position: absolute;
         left: -30px;
         top: 20px;
       }
-
-
-
-
     </style>
   </head>
   <body>
