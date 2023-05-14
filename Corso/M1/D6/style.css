@@ -1,7 +1,8 @@
 /* ! Helpers */
 
-*
-{
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -20,9 +21,6 @@ body{
 /* ! Content */
 
 .hero{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   position: relative;
 }
@@ -74,6 +72,7 @@ body{
   color: black;
   background: white;
   border-radius: 980px;
+  cursor: pointer;
 }
 
 .hero-icon .hero-icon-fit span{
@@ -90,7 +89,7 @@ body{
 .hero-icon,
 .hero-icon .hero-icon-fit span {
   opacity: 0;
-  transition: transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear;
 }
 
 .hero-search {
