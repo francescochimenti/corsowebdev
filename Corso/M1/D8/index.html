@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2ab8f7fa9b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Medium</title>
+  </head>
+
+<!-- ! Info: 
+            
+             Scroll replicato come da mockup e da sito originale;
+              -inseriti gli sticky;
+              -inseriti vari hover;
+
+             Cliccando su "Se all(3)" vedrai l'effetto scroll dello scroll;
+             
+             Reso responsive per desktop e laptop (alla buona) utilizzando una max-width;
+
+-->
+
+  <body>
+    
+    <!-- ! Navbar -->
+
+    <div class="nav">
+      <div class="logo">
+        <svg viewBox="0 0 3940 610">
+          <path
+            d="M594.79 308.2c0 163.76-131.85 296.52-294.5 296.52S5.8 472 5.8 308.2 137.65 11.69 300.29 11.69s294.5 132.75 294.5 296.51M917.86 308.2c0 154.16-65.93 279.12-147.25 279.12s-147.25-125-147.25-279.12S689.29 29.08 770.61 29.08s147.25 125 147.25 279.12M1050 308.2c0 138.12-23.19 250.08-51.79 250.08s-51.79-112-51.79-250.08 23.19-250.08 51.8-250.08S1050 170.09 1050 308.2M1862.77 37.4l.82-.18v-6.35h-167.48l-155.51 365.5-155.51-365.5h-180.48v6.35l.81.18c30.57 6.9 46.09 17.19 46.09 54.3v434.45c0 37.11-15.58 47.4-46.15 54.3l-.81.18V587H1327v-6.35l-.81-.18c-30.57-6.9-46.09-17.19-46.09-54.3V116.9L1479.87 587h11.33l205.59-483.21V536.9c-2.62 29.31-18 38.36-45.68 44.61l-.82.19v6.3h213.3v-6.3l-.82-.19c-27.71-6.25-43.46-15.3-46.08-44.61l-.14-445.2h.14c0-37.11 15.52-47.4 46.08-54.3m97.43 287.8c3.49-78.06 31.52-134.4 78.56-135.37 14.51.24 26.68 5 36.14 14.16 20.1 19.51 29.55 60.28 28.09 121.21zm-2.11 22h250v-1.05c-.71-59.69-18-106.12-51.34-138-28.82-27.55-71.49-42.71-116.31-42.71h-1c-23.26 0-51.79 5.64-72.09 15.86-23.11 10.7-43.49 26.7-60.45 47.7-27.3 33.83-43.84 79.55-47.86 130.93-.13 1.54-.24 3.08-.35 4.62s-.18 2.92-.25 4.39a332.64 332.64 0 0 0-.36 21.69C1860.79 507 1923.65 600 2035.3 600c98 0 155.07-71.64 169.3-167.8l-7.19-2.53c-25 51.68-69.9 83-121 79.18-69.76-5.22-123.2-75.95-118.35-161.63m532.69 157.68c-8.2 19.45-25.31 30.15-48.24 30.15s-43.89-15.74-58.78-44.34c-16-30.7-24.42-74.1-24.42-125.51 0-107 33.28-176.21 84.79-176.21 21.57 0 38.55 10.7 46.65 29.37zm165.84 76.28c-30.57-7.23-46.09-18-46.09-57V5.28L2424.77 60v6.7l1.14-.09c25.62-2.07 43 1.47 53.09 10.79 7.9 7.3 11.75 18.5 11.75 34.26v71.14c-18.31-11.69-40.09-17.38-66.52-17.38-53.6 0-102.59 22.57-137.92 63.56-36.83 42.72-56.3 101.1-56.3 168.81C2230 518.72 2289.53 600 2378.13 600c51.83 0 93.53-28.4 112.62-76.3V588h166.65v-6.66zm159.29-505.33c0-37.76-28.47-66.24-66.24-66.24-37.59 0-67 29.1-67 66.24s29.44 66.24 67 66.24c37.77 0 66.24-28.48 66.24-66.24m43.84 505.33c-30.57-7.23-46.09-18-46.09-57h-.13V166.65l-166.66 47.85v6.5l1 .09c36.06 3.21 45.93 15.63 45.93 57.77V588h166.8v-6.66zm427.05 0c-30.57-7.23-46.09-18-46.09-57V166.65L3082 212.92v6.52l.94.1c29.48 3.1 38 16.23 38 58.56v226c-9.83 19.45-28.27 31-50.61 31.78-36.23 0-56.18-24.47-56.18-68.9V166.66l-166.66 47.85V221l1 .09c36.06 3.2 45.94 15.62 45.94 57.77v191.27a214.48 214.48 0 0 0 3.47 39.82l3 13.05c14.11 50.56 51.08 77 109 77 49.06 0 92.06-30.37 111-77.89v66h166.66v-6.66zM3934.2 588v-6.67l-.81-.19c-33.17-7.65-46.09-22.07-46.09-51.43v-243.2c0-75.83-42.59-121.09-113.93-121.09-52 0-95.85 30.05-112.73 76.86-13.41-49.6-52-76.86-109.06-76.86-50.12 0-89.4 26.45-106.25 71.13v-69.87l-166.66 45.89v6.54l1 .09c35.63 3.16 45.93 15.94 45.93 57V588h155.5v-6.66l-.82-.2c-26.46-6.22-35-17.56-35-46.66V255.72c7-16.35 21.11-35.72 49-35.72 34.64 0 52.2 24 52.2 71.28V588h155.54v-6.66l-.82-.2c-26.46-6.22-35-17.56-35-46.66v-248a160.45 160.45 0 0 0-2.2-27.68c7.42-17.77 22.34-38.8 51.37-38.8 35.13 0 52.2 23.31 52.2 71.28V588z"
+          ></path>
+        </svg>
+      </div>
+      <div class="spacer"></div>
+      <div class="logoicon">
+        <div>
+          <i class="icon-sizer"><ion-icon name="search-outline"></ion-icon></i>
+        </div>
+        <div>
+          <i class="icon-sizer"
+            ><ion-icon name="bookmarks-outline"></ion-icon
+          ></i>
+        </div>
+        <div>
+          <i class="icon-sizer"
+            ><ion-icon name="notifications-outline"></ion-icon
+          ></i>
+        </div>
+        <div class="aligner">
+          <span class="membership">Resume membership</span>
+        </div>
+        <div>
+          <span class="t-span">T</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ! Hero -->
+
+    <div class="hero">
+
+      <!-- ! Hero left -->
+
+        <div class="hero-left">
+            <div class="hero-left-container">
+        <div class="heronav pt-3">
+            <div class="hero-flw"><span>FOLLOWING</span></div>  
+            <div class="hero-rec"><span>RECOMMENDED FOR YOU</span></div>
+        </div>
+
+                          <!-- ! Card -->
+                          <div class="hero-div">
+        <div class="hero-content pt-3">
+                <div class="logo-hero pb-1"><img class="logo-hero-sizer logo-q4" src="assets/logo-img1.png" alt=""><span>Kolby Sisk <span class="text-grey">in</span> Udacity Eng & Data</span></div>
+                <div class="titlelogo">
+                    <h2 class="line-hero">React state management in 2022—Return of the <br>
+                        Redux</h2>
+                        <p class="text-grey">At the beginning of the vear if vou told me I'd be publishing a <br> recommendation to use Redux I would have laughed in your face. Yet her...</p>
+                </div>
+                <div class="hero-footer">
+                  <div>
+                    <span>Dec 3 ·</span>
+                    <span>4 min read ·</span>
+                    <span class="hero-sb">React</span>
+                    <span>· Popular on medium</span>
+                  </div>
+                  <div class="svg-flex">
+                    <div>
+                      <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                      fill="none">
+                    <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                    </svg>
+                    </div>
+                    <div>
+                      <svg width="24" height="24" viewBox="0 0 24 24"
+                      fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                    </svg>
+                    </div>
+                  </div>
+                </div>
+        </div>
+        <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img1.webp" alt=""></div>
+        </div>
+
+        <div class="hero-div">
+          <div class="hero-content pt-3">
+                  <div class="logo-hero pb-1"><img class="logo-hero-sizer logo-radius" src="assets/logo-img2.jpeg" alt=""><span>Kolby Sisk <span class="text-grey">in</span> Udacity Eng & Data</span></div>
+                  <div class="titlelogo">
+                      <h2 class="line-hero">How To Sanitize Your Express App Against<br>
+                        MongoDB Injection & Cross-Site Scripting.</h2>
+                          <p class="text-grey">Easiest way to sanitize your express app.</p>
+                  </div>
+                  <div class="hero-footer">
+                    <div>
+                      <span>Dec 19 ·</span>
+                      <span>6 min read ·</span>
+                      <span class="hero-sb">Web Development</span>
+                      <span>· Based on your reading history</span>
+                    </div>
+                    <div class="svg-flex">
+                      <div mt--1>
+                        <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                        fill="none">
+                      <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                      </svg>
+                      </div>
+                      <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                      </svg>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+          <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img2.webp" alt=""></div>
+          </div>
+
+          <div class="hero-div">
+            <div class="hero-content pt-3">
+                    <div class="logo-hero pb-1"><img class="logo-hero-sizer" src="assets/logo-img3.png" alt=""><span>Divvesh Bhalani <span class="text-grey">in</span> DhiWise</span></div>
+                    <div class="titlelogo">
+                        <h2 class="line-hero">React 18 new features and updates</h2>
+                            <p class="text-grey">Know about some cool features and updates of React 18.</p>
+                    </div>
+                    <div class="hero-footer">
+                      <div>
+                        <span>Nov 24 ·</span>
+                        <span>4 min read ·</span>
+                        <span class="hero-sb">Reactjs</span>
+                        <span>· Popular on medium</span>
+                      </div>
+                      <div class="svg-flex">
+                        <div>
+                          <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                          fill="none">
+                        <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                        </svg>
+                        </div>
+                        <div>
+                          <svg width="24" height="24" viewBox="0 0 24 24"
+                          fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                        </svg>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img3.webp" alt=""></div>
+            </div>
+
+            <div class="hero-div">
+              <div class="hero-content pt-3">
+                      <div class="logo-hero pb-1"><img class="logo-hero-sizer" src="assets/logo-img4.png" alt=""><span>Vsevolod Ulyanovich <span class="text-grey">in</span> Fively Blog</span></div>
+                      <div class="titlelogo">
+                          <h2 class="line-hero">15 Best Web App Ideas for a Startup in 2021</h2>
+                              <p class="text-grey">15 Startup Ideas and Technologies That Could Make You a Millionaire</p>
+                      </div>
+                      <div class="hero-footer">
+                        <div>
+                          <span>Oct 29 ·</span>
+                          <span>6 min read ·</span>
+                          <span class="hero-sb">Web Development</span>
+                          <span>· Popular on medium</span>
+                        </div>
+                        <div class="svg-flex">
+                          <div>
+                            <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                            fill="none">
+                          <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                          </svg>
+                          </div>
+                          <div>
+                            <svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                          </svg>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img4.webp" alt=""></div>
+              </div>
+
+              <div class="hero-div">
+                <div class="hero-content pt-3">
+                        <div class="logo-hero pb-1"><img class="logo-hero-sizer logo-q4" src="assets/logo-img1.png" alt=""><span>Kolby Sisk <span class="text-grey">in</span> Udacity Eng & Data</span></div>
+                        <div class="titlelogo">
+                            <h2 class="line-hero">Understanding re-rendering and memoization in<br>
+                              React</h2>
+                                <p class="text-grey">The following are quick tips to increase performance in vour React <br>application by understanding re-rendering and memoization. To better....</p>
+                        </div>
+                        <div class="hero-footer">
+                          <div>
+                            <span>Dec 6 ·</span>
+                            <span>4 min read ·</span>
+                            <span class="hero-sb">React</span>
+                            <span>· Popular on medium</span>
+                          </div>
+                          <div class="svg-flex">
+                            <div>
+                              <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                              fill="none">
+                            <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                            </svg>
+                            </div>
+                            <div>
+                              <svg width="24" height="24" viewBox="0 0 24 24"
+                              fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                            </svg>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+                <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img5.jpeg" alt=""></div>
+                </div>
+
+                <div class="hero-div">
+                  <div class="hero-content pt-3">
+                          <div class="logo-hero pb-1"><img class="logo-hero-sizer" src="assets/logo-img6.png" alt=""><span>Arun Kashyap <span class="text-grey">in</span> Nerd For Tech</span></div>
+                          <div class="titlelogo">
+                              <h2 class="line-hero">Why Get Rid Of PromisesTo Fetch Data In React?</h2>
+                                  <p class="text-grey">How You Can Make Your Code Well Structured !!</p>
+                          </div>
+                          <div class="hero-footer">
+                            <div>
+                              <span>Jul 5 ·</span>
+                              <span>5 min read ·</span>
+                              <span class="hero-sb">React</span>
+                              <span>· Selected for you</span>
+                            </div>
+                            <div class="svg-flex">
+                              <div>
+                                <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                                fill="none">
+                              <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                              </svg>
+                              </div>
+                              <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                              </svg>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img6.jpeg" alt=""></div>
+                  </div>
+
+                  <div class="hero-div">
+                    <div class="hero-content pt-3">
+                            <div class="logo-hero pb-1"><img class="logo-hero-sizer logo-radius" src="assets/logo-img2.jpeg" alt=""><span>Kolby Sisk <span class="text-grey">in</span> Udacity Eng & Data</span></div>
+                            <div class="titlelogo">
+                                <h2 class="line-hero">How To Sanitize Your Express App Against<br>
+                                  MongoDB Injection & Cross-Site Scripting.</h2>
+                                    <p class="text-grey">Easiest way to sanitize your express app.</p>
+                            </div>
+                            <div class="hero-footer">
+                              <div>
+                                <span>Dec 19 ·</span>
+                                <span>6 min read ·</span>
+                                <span class="hero-sb">Web Development</span>
+                                <span>· Based on your reading history</span>
+                              </div>
+                              <div class="svg-flex">
+                                <div mt--1>
+                                  <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                                  fill="none">
+                                <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                                </svg>
+                                </div>
+                                <div>
+                                  <svg width="24" height="24" viewBox="0 0 24 24"
+                                  fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                                </svg>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img2.webp" alt=""></div>
+                    </div>
+          
+                    <div class="hero-div">
+                      <div class="hero-content pt-3">
+                              <div class="logo-hero pb-1"><img class="logo-hero-sizer" src="assets/logo-img3.png" alt=""><span>Divvesh Bhalani <span class="text-grey">in</span> DhiWise</span></div>
+                              <div class="titlelogo">
+                                  <h2 class="line-hero">React 18 new features and updates</h2>
+                                      <p class="text-grey">Know about some cool features and updates of React 18.</p>
+                              </div>
+                              <div class="hero-footer">
+                                <div>
+                                  <span>Nov 24 ·</span>
+                                  <span>4 min read ·</span>
+                                  <span class="hero-sb">Reactjs</span>
+                                  <span>· Popular on medium</span>
+                                </div>
+                                <div class="svg-flex">
+                                  <div>
+                                    <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                                    fill="none">
+                                  <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                                  </svg>
+                                  </div>
+                                  <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                                  </svg>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img3.webp" alt=""></div>
+                      </div>
+          
+                      <div class="hero-div">
+                        <div class="hero-content pt-3">
+                                <div class="logo-hero pb-1"><img class="logo-hero-sizer" src="assets/logo-img4.png" alt=""><span>Vsevolod Ulyanovich <span class="text-grey">in</span> Fively Blog</span></div>
+                                <div class="titlelogo">
+                                    <h2 class="line-hero">15 Best Web App Ideas for a Startup in 2021</h2>
+                                        <p class="text-grey">15 Startup Ideas and Technologies That Could Make You a Millionaire</p>
+                                </div>
+                                <div class="hero-footer">
+                                  <div>
+                                    <span>Oct 29 ·</span>
+                                    <span>6 min read ·</span>
+                                    <span class="hero-sb">Web Development</span>
+                                    <span>· Popular on medium</span>
+                                  </div>
+                                  <div class="svg-flex">
+                                    <div>
+                                      <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                                      fill="none">
+                                    <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                                    </svg>
+                                    </div>
+                                    <div>
+                                      <svg width="24" height="24" viewBox="0 0 24 24"
+                                      fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                                    </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img4.webp" alt=""></div>
+                        </div>
+          
+                        <div class="hero-div">
+                          <div class="hero-content pt-3">
+                                  <div class="logo-hero pb-1"><img class="logo-hero-sizer logo-q4" src="assets/logo-img1.png" alt=""><span>Kolby Sisk <span class="text-grey">in</span> Udacity Eng & Data</span></div>
+                                  <div class="titlelogo">
+                                      <h2 class="line-hero">Understanding re-rendering and memoization in<br>
+                                        React</h2>
+                                          <p class="text-grey">The following are quick tips to increase performance in vour React <br>application by understanding re-rendering and memoization. To better....</p>
+                                  </div>
+                                  <div class="hero-footer">
+                                    <div>
+                                      <span>Dec 6 ·</span>
+                                      <span>4 min read ·</span>
+                                      <span class="hero-sb">React</span>
+                                      <span>· Popular on medium</span>
+                                    </div>
+                                    <div class="svg-flex">
+                                      <div>
+                                        <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                                        fill="none">
+                                      <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                                      </svg>
+                                      </div>
+                                      <div>
+                                        <svg width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                                      </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img5.jpeg" alt=""></div>
+                          </div>
+          
+                          <div class="hero-div">
+                            <div class="hero-content pt-3">
+                                    <div class="logo-hero pb-1"><img class="logo-hero-sizer" src="assets/logo-img6.png" alt=""><span>Arun Kashyap <span class="text-grey">in</span> Nerd For Tech</span></div>
+                                    <div class="titlelogo">
+                                        <h2 class="line-hero">Why Get Rid Of PromisesTo Fetch Data In React?</h2>
+                                            <p class="text-grey">How You Can Make Your Code Well Structured !!</p>
+                                    </div>
+                                    <div class="hero-footer">
+                                      <div>
+                                        <span>Jul 5 ·</span>
+                                        <span>5 min read ·</span>
+                                        <span class="hero-sb">React</span>
+                                        <span>· Selected for you</span>
+                                      </div>
+                                      <div class="svg-flex">
+                                        <div>
+                                          <svg class="svg-p" width="26" height="26" viewBox="0 0 24 24"
+                                          fill="none">
+                                        <path d="M17.5 1.25a.5.5 0 0 1 1 0v2.5H21a.5.5 0 0 1 0 1h-2.5v2.5a.5.5 0 0 1-1 0v-2.5H15a.5.5 0 0 1 0-1h2.5v-2.5zm-11 4.5a1 1 0 0 1 1-1H11a.5.5 0 0 0 0-1H7.5a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V5.75z" fill="rgb(108, 108, 108)"></path>
+                                        </svg>
+                                        </div>
+                                        <div>
+                                          <svg width="24" height="24" viewBox="0 0 24 24"
+                                          fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000"></path>
+                                        </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                            </div>
+                            <div class="hero-right-sizer pt-3"><img class="img-sizer" src="assets/img6.jpeg" alt=""></div>
+                            </div>
+                            
+    </div>
+
+</div>
+
+      <!-- ! Hero right -->
+
+    <div class="hero-right mt-3">
+
+    <div class="border-bottom-div">
+      <div class="hero-twitter">
+        <div class="hero-twitter-svg">
+          <div> <svg width="40" height="40" viewBox="0 0 1043.63 592.71">
+            <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path>
+          </svg>
+          </div>
+
+          <div> <svg width="16" height="16" fill="rgba(117, 117, 117, 1)">
+            <path d="M9 9H3v1h6v6h1v-6h6V9h-6V3H9v6z" fill-rule="evenodd"></path>
+          </svg>
+          </div>
+
+          <div> <svg width="29" height="29" fill="rgb(56, 161, 243)">
+            <path d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z"></path>
+          </svg>
+          </div>
+          
+        </div>
+        <div class="pt-1"><p class="discover-p">Discover Medium writers you already <br> follow on Twitter.</p></div>
+        <div class="hero-connect-twitter mt-1">
+          <div> <svg width="29" height="29" fill="rgb(56, 161, 243)">
+            <path d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z"></path>
+          </svg>
+          </div>
+          <div><span>Connect to Twitter</span></div>
+        </div>
+        <div class="mt-2 maybe-later"><a href="#">Mabye Later</a></div>
+      </div>
+</div>
+<div class="bubble-div mt-3">
+  <h3>Recommended topics</h3>
+  <div class="mt-1">
+    <span class="span-bubble">Technology</span> <span class="span-bubble">Money</span> <span class="span-bubble">Business</span>
+  </div>
+  <div class="pt-1">
+    <span class="span-bubble">Productivity</span> <span class="span-bubble">Psychology</span>
+  </div>
+  <div class="pt-1">
+    <span class="span-bubble">Mindfulness</span> <span class="span-bubble">Art</span>
+  </div>
+</div>
+<div class="sticky-div">
+
+<div class="hero-people pt-2">
+  <div><p class="fb">Who to follow</p></div>
+
+  <div class="hero-profile">
+    <div><img class="hero-prof-img" src="assets/right-img1.png" alt=""></div>
+    <div class="hero-pro-info">
+      <div><span class="title-name-prof">Lessig</span></div>
+      <div class="pt-0-5"><span class="subtitle-name-prof">law professor, activist.</span></div>
+    </div>
+    <div class="follow-div">Follow</div>
+  </div>
+
+  <div class="hero-profile mt-2">
+    <div><img class="hero-prof-img" src="assets/right-img2.jpeg" alt=""></div>
+    <div class="hero-pro-info">
+      <div><span class="title-name-prof">David Wineberg</span></div>
+      <div class="pt-0-5"><span class="subtitle-name-prof">Author, The Straight Dope, or <br>
+        What I learned from my first...</span></div>
+    </div>
+    <div class="follow-div">Follow</div>
+  </div>
+
+  <div class="hero-profile mt-2">
+    <div><img class="hero-prof-img" src="assets/right-img3.jpeg" alt=""></div>
+    <div class="hero-pro-info">
+      <div><span class="title-name-prof">Bonsu Thompson</span></div>
+      <div class="pt-0-5"><span class="subtitle-name-prof">Bonsu Thompson is a writer, producer, Brooklynite and 2019...</span></div>
+    </div>
+    <div class="follow-div">Follow</div>
+  </div>
+</div>
+    
+<div class="hero-saved mt-3">
+  <div><p class="fb">Recently saved</p></div>
+
+  <div class="mt-1">
+  <div class="logo-hero pb-1"><img class="logo-hero-sizer logo-q4" src="assets/right-img4.png" alt=""><span>Eva Keiffenheim<span class="text-grey"> in</span> Age of Awareness</span></div>
+  <div><h3>The Feynman Technique Will Make You
+    Remember What You Read</h3></div>
+    <div class="footer-saved">
+      <span class="tgsp">Oct 2, 2020</span>
+      <span class="tgsp">· 6 min read</span>
+      <span class="tgsp"> ★</span>
+    </div>
+</div>
+
+<div class="pt-1">
+  <div class="logo-hero pb-1"><img class="logo-hero-sizer logo-radius" src="assets/right-img3.jpeg" alt=""><span>chrissy teigen</span></div>
+  <div><h3>Hi.</h3></div>
+    <div class="footer-saved">
+      <span class="tgsp">Oct 27, 2020</span>
+      <span class="tgsp">· 8 min read</span>
+    </div>
+</div>
+
+<div class="mt-2 cgr">
+  <a href="#">See all (3)</a>
+</div>
+
+</div>
+
+<div class="real-footer pt-2">
+  <span>Help</span>
+  <span>Status</span>
+  <span>Writers</span>
+  <span>Blog</span>
+  <span>Careers</span>
+</div>
+
+<div class="real-footer mt-1">
+  <span>Privacy</span>
+  <span>Terms</span>
+  <span>About</span>
+</div>
+<div class="spacer"></div>
+
+</div>
+
+    </div>
+
+
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
