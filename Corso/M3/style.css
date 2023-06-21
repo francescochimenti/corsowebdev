@@ -30,7 +30,7 @@
 }
 
 /* ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio") */
-.blog-sidebar div:nth-child(2) ol li:nth-child(2n) a {
+.blog-sidebar div:nth-child(2) ol li a{
     color: purple;
 }
 
