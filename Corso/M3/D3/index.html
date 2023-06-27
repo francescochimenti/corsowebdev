@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Album</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <style>
+        .transparent-table {
+            background-color: transparent;
+            font-weight: bold;
+        }
+        
+        .transparent-table th,
+        .transparent-table td,
+        .transparent-table tr {
+            background-color: transparent;
+        }
+
+        .container {
+    z-index: 1;
+    }
+
+        .container > div {
+        z-index: -1;
+        }
+        </style>
+        
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">topAlbum.com</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#top-album">Top album</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#my-album">My favorite album</a>
+            </li
+        </div>
+      </div>
+    </nav>
+
+    <div class="container p-5 text-center"  id="top-album">
+        <h1 class="fs-1">Top album</h1>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card mb-4">
+            <img class="card-img-top" src="media/1-album.jpeg" alt="Copertina dell'album">
+            <div class="card-body">
+              <h5 class="card-title">Licensed to Ill</h5>
+              <p class="card-text">Beastie Boys</p>
+              <p class="card-text">Rap</p>
+              <p class="card-text">Durata: 40 min</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-4">
+              <img class="card-img-top" src="media/2-album.jpeg" alt="Copertina dell'album">
+              <div class="card-body">
+                <h5 class="card-title">Ramones</h5>
+                <p class="card-text">Ramones</p>
+                <p class="card-text">Punk Rock</p>
+                <p class="card-text">Durata: 50 min</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-4">
+              <img class="card-img-top" src="media/3-album.jpeg" alt="Copertina dell'album">
+              <div class="card-body">
+                <h5 class="card-title">Licensed to Ill</h5>
+                <p class="card-text">Beastie Boys</p>
+                <p class="card-text">Rap</p>
+                <p class="card-text">Durata: 60 min</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-4">
+              <img class="card-img-top" src="media/4-album.jpeg" alt="Copertina dell'album">
+              <div class="card-body">
+                <h5 class="card-title">Are You Experienced</h5>
+                <p class="card-text">Jimi Hendrix
+                </p>
+                <p class="card-text">Rock psichedelico, Blues rock</p>
+                <p class="card-text">Durata: 70 min</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container text-center" id="my-album">
+            <p class="fs-1">My favorite album</p>
+        </div>
+
+        <div class="container position-relative">
+            <div class="position-absolute w-100 h-100" style="background: url('media/1-album.jpeg') center / cover no-repeat; opacity: 0.5;"></div>
+            <div class="row">
+              <div class="col-12">
+                <h1>Licenced to Ill</h1>
+                <p>Beastie Boys</p>
+                <p>Durata: 60 min</p>
+                <p>Rap</p>
+                <table class="table transparent-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Titolo Traccia</th>
+                      <th scope="col">Durata</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Rhymin & Stealin</td>
+                      <td>4:08</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>The New Style</td>
+                        <td>4:35</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>She's Crafty</td>
+                        <td>3:35</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Posse in Effect</td>
+                        <td>2:26</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Slow Ride</td>
+                        <td>2:56</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>Girls</td>
+                        <td>2:14</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>Fight for Your Right</td>
+                        <td>3:27</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">8</th>
+                        <td>No Sleep till Brooklyn</td>
+                        <td>4:06</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">9</th>
+                        <td>Paul Revere</td>
+                        <td>3:41</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>Hold It Now, Hit It</td>
+                        <td>3:26</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">11</th>
+                        <td>Brass Monkey</td>
+                        <td>2:37</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">12</th>
+                        <td>Slow and Low</td>
+                        <td>3:38</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">13</th>
+                        <td>Time to Get Ill</td>
+                        <td>3:37
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        
+
+      </div>
+    </div>
+ 
+        
+        
+        
+        
+        
+     
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
