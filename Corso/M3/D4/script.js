@@ -18,7 +18,7 @@ const navbarLinks = document.querySelectorAll('.navbar-nav>li>a');
 
 for (let i = 0; i < navbarLinks.length; i++) {
   const item = navbarLinks[i];
-
+  
   item.addEventListener('click', () => {
     setTimeout(() => {
       const offCanvasElement = document.getElementById('offcanvasNavbar');
