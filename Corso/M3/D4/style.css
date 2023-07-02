@@ -1,124 +1,129 @@
-  * {
-	  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  
-  body {
-	  font-family: "Poppins";
-  }
-  
+* {
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+body {
+  font-family: "Poppins";
+}
+
 .custom-gradient {
-	background-image: url("./media/pay_off.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	color: white;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	border-radius: 10px;
-	height: 350px;
-	filter: saturate(150%)
+  background-image: url("./media/pay_off.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  height: 350px;
+  filter: saturate(150%);
 }
 
-.custom-gradient2{
-	background-image: url("https://littletravelsbiglove.com/wp-content/uploads/2021/07/spiaggia-del-relitto-zante-1.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	color: white;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	border-radius: 10px;
-	height: 500px;
-	position: relative;
-	transition: linear 0.2s;
-	filter: saturate(250%)
+.custom-gradient2 {
+  background-image: url("https://littletravelsbiglove.com/wp-content/uploads/2021/07/spiaggia-del-relitto-zante-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  height: 500px;
+  position: relative;
+  transition: linear 0.2s;
+  filter: saturate(250%);
 }
 
- .custom-gradient2:after{
-	  content: "Prenota subito!";
-	  position: absolute;
-	  bottom: 10px;
-	  right: 10px;
-	  background: red;
-	  color: white;
-	  padding: 20px 10px;
-	  border-radius: 980px; 
-	  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	  border: 1px solid rgb(255, 174, 0);
-  }
-  .custom-gradient2:hover{
-	  scale: 1.05;
-	  cursor: pointer;
-	  filter: brightness(80%);
-  }
+.custom-gradient2:after {
+  content: "Prenota subito!";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  padding: 20px 10px;
+  border-radius: 980px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid rgb(255, 174, 0);
+}
+.custom-gradient2:hover {
+  scale: 1.05;
+  cursor: pointer;
+  filter: brightness(80%);
+}
 
 .shadow-main {
-	/* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+  /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
 }
 
 .card-shadow {
-	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-	border: none;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  border: none;
 }
 
-.footer-shadow{
-	box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-	background: rgb(255,232,0);
-	background: linear-gradient(180deg, rgba(255,232,0,1) 0%, rgba(255,188,0,1) 100%);
+.footer-shadow {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  background: rgb(255, 232, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 232, 0, 1) 0%,
+    rgba(255, 188, 0, 1) 100%
+  );
 }
 
 h1 {
-	font-size: 6rem;
+  font-size: 6rem;
 }
 
 .spacer {
-	font-size: 6rem;
+  font-size: 6rem;
 }
 
- .navbar-toggler {
-	border: none;
-  }
-  
-  .card {
-	  transition: scale linear 0.2s;
-	  cursor: pointer;
-  }
-  
-  .sconto:after{
-	  content: "-25%";
-	  position: absolute;
-	  top: 5px;
-	  right: 5px;
-	  background: red;
-	  color: white;
-	  padding: 10px 5px;
-	  border-radius: 50%; 
-	  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	  border: 1px solid rgb(255, 174, 0);
-  }
-  
-  .card:hover {
-	  scale: 1.1;
-  }
-  
-  .card img {
-	  aspect-ratio: 1/0.7;
-  }
-  
-  .toggle-new {
-	  border: none;
-  }
-  
-  .navbar-toggler:active,
-  .navbar-toggler:focus {
-	outline: none !important;
-	box-shadow: none !important;
-	border: none !important;
-  }
-  
-  #wO img {
-	  filter: saturate(120%);
-  }
-  
-  #wSummer img, #lMinute img{
-	  filter: saturate(165%)
-  }
-  
+.navbar-toggler {
+  border: none;
+}
+
+.card {
+  transition: scale linear 0.2s;
+  cursor: pointer;
+}
+
+.sconto:after {
+  content: "-25%";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  padding: 10px 5px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid rgb(255, 174, 0);
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.card img {
+  aspect-ratio: 1/0.7;
+}
+
+.toggle-new {
+  border: none;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#wO img {
+  filter: saturate(120%);
+}
+
+#wSummer img,
+#lMinute img {
+  filter: saturate(165%);
+}
