@@ -30,3 +30,22 @@ for (let i = 0; i < navbarLinks.length; i++) {
     }, 500);
   });
 }
+
+// chiusura sezioni
+
+document.querySelector(".wOffB").addEventListener("click", function() {
+  let elements = document.getElementsByClassName("wOff");
+  let iconElement = document.querySelector(".wOffB i");
+
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.toggle("hider");
+
+    setTimeout(function() {
+      elements[i].classList.toggle("hider2");
+    }, 300);
+  }
+});
+
+
+
+

@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shape-circle.css' rel='stylesheet'>
   </head>
   <body>
     <!-- ! Navbar -->
@@ -73,8 +74,11 @@
      </div>
      <!-- ! Offerte della settimana -->
      <div class="row pt-5" id="wO">
-     <h2 class="text-center display-5 fw-bold p-5 animate__animated animate__bounceInDown">Offerte della Settimana</h2>
-       <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="d-flex align-items-center justify-content-around">
+       <h2 class="text-center display-5 fw-bold p-5 animate__animated animate__bounceInDown">Offerte della Settimana</h2> 
+       <button class="wOffB d-flex align-items-center"><span class="fw-bold me-2">open&close</span><i class="gg-shape-circle"></i></button>
+    </div>
+       <div class="col-lg-3 col-md-4 col-sm-6 wOff">
     <div class="card card-shadow mb-5 sconto">
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -106,7 +110,7 @@
       </div>
     </div>
        </div>
-       <div class="col-lg-3 col-md-4 col-sm-6">
+       <div class="col-lg-3 col-md-4 col-sm-6 wOff">
        <div class="card card-shadow mb-5 sconto">
         <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -138,7 +142,7 @@
          </div>
        </div>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="col-lg-3 col-md-4 col-sm-6 wOff">
           <div class="card card-shadow mb-5 sconto">
             <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
@@ -170,7 +174,7 @@
             </div>
           </div>
              </div>
-             <div class="col-lg-3 col-md-4 col-sm-6">
+             <div class="col-lg-3 col-md-4 col-sm-6 wOff">
              <div class="card card-shadow mb-5 sconto">
               <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
