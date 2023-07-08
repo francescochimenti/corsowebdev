@@ -33,9 +33,20 @@ body {
     font-weight: 500;
 }
 
+.myCard {
+    transition: scale, margin, 0.3s linear;
+}
+
+.myCard:hover{ 
+    scale: 1.05;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .myCardTitle{
     font-size: 15px;
 }
+
 
 .my-arrow{
     background-color: white;
