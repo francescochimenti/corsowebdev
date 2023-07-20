@@ -70,4 +70,3 @@ function acronimo(string) {
     return myAcr
 }
 console.log(acronimo("ciao come va?"));
-
