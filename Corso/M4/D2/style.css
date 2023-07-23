@@ -159,9 +159,14 @@ ul {
   filter: brightness(50%);
 }
 
+.mainPage .row:nth-of-type(6){
+  margin-bottom: 100px;
+}
+
 #eminem,
 #metallica,
 #queen,
+#emiskilla,
 #searchResults,
 #artist-tracks {
   color: white;
@@ -228,4 +233,20 @@ ul {
 
 .mainPage img {
   width: 200px;
+}
+
+.card-bella {
+  width: 100%;
+  background-color: rgba(243, 242, 242, 0.184);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-bella h5 {
+  font-size: 30px;
+}
+
+.card-bella p {
+  font-size: 15px;
 }
