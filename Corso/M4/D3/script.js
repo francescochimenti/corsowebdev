@@ -1,12 +1,12 @@
-const formEl = document.querySelector("form");
-const inputEl = document.getElementById("search-input");
-const searchResults = document.querySelector(".search-results");
+const moduloForm = document.querySelector("form");
+const elementoInput = document.getElementById("search-input");
+const risultatiRicerca = document.querySelector(".search-results");
 
-let inputData = "";
+let datiInput = "";
 
-function searchImages(){
-    inputData = inputEl.value;
-    const url = `https://api.pexels.com/v1/search?query=${inputData}`;
+function cercaImmagini(){
+    datiInput = elementoInput.value;
+    const url = `https://api.pexels.com/v1/search?query=${datiInput}`;
 
     fetch(url, {
         method: 'GET',
@@ -14,35 +14,35 @@ function searchImages(){
             'Authorization': 'C7wlLfQMIpo0pu4jMPEeuzuT9gRinnM3ev9qOeGr9EO6PbOymVL5cSPY'
         }
     })
-    .then(response => response.json())
-    .then(data => {
-        const results = data.photos;
+    .then(risposta => risposta.json())
+    .then(risposta => {
+        const risultati = risposta.photos;
 
-        searchResults.innerHTML = "";
+        risultatiRicerca.innerHTML = "";
         
-        results.filter((result, indice) => {
-            const imageWrapper = document.createElement('div');
-            imageWrapper.classList.add("search-result");
-            imageWrapper.style.animationDelay = `${indice * 0.05}s`;
-            const image = document.createElement("img");
-            image.src = result.src.large;
-            image.alt = result.photographer;
-            const imageLink = document.createElement('a');
-            imageLink.href = result.url;
-            imageLink.target = "_blank";
-            imageLink.textContent = result.photographer;
+        risultati.filter((risultato, indice) => {
+            const contenitoreImmagine = document.createElement('div');
+            contenitoreImmagine.classList.add("search-result");
+            contenitoreImmagine.style.animationDelay = `${indice * 0.05}s`;
+            const immagine = document.createElement("img");
+            immagine.src = risultato.src.large;
+            immagine.alt = risultato.photographer;
+            const linkImmagine = document.createElement('a');
+            linkImmagine.href = risultato.url;
+            linkImmagine.target = "_blank";
+            linkImmagine.textContent = risultato.photographer;
 
-            imageWrapper.appendChild(image);
-            imageWrapper.appendChild(imageLink);
-            searchResults.appendChild(imageWrapper);
+            contenitoreImmagine.appendChild(immagine);
+            contenitoreImmagine.appendChild(linkImmagine);
+            risultatiRicerca.appendChild(contenitoreImmagine);
         });
     })
     .catch(err => {
-        console.error('An error occurred:', err);
+        console.error('Si è verificato un errore:', err);
     });
 }
 
-formEl.addEventListener("submit", (event) =>{
-    event.preventDefault();
-    searchImages();
+moduloForm.addEventListener("submit", (evento) =>{
+    evento.preventDefault();
+    cercaImmagini();
 })
