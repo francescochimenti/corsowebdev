@@ -1,5 +1,21 @@
 {
     "git.ignoreLimitWarning": true,
     "inline-bookmarks.view.showVisibleFilesOnly": true,
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "cSpell.words": [
+        "cerca",
+        "contenitore",
+        "dati",
+        "elemento",
+        "errore",
+        "evento",
+        "Immagine",
+        "Immagini",
+        "indice",
+        "Ricerca",
+        "risposta",
+        "risultati",
+        "risultato",
+        "verificato"
+    ]
 }
