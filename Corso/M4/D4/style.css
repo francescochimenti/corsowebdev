@@ -1,5 +1,5 @@
 /* ! Reset */
-body, html{ font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{list-style-type: none;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
+body, html{ font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{list-style-type: none;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 1.5rem;margin-top: 10px;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
 
 /* ! Navbar */
 
@@ -62,6 +62,7 @@ nav {
   margin: 0 auto;
   box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
   height:fit-content;
+  border-radius: 10px;
 }
 
 .cartShop{
@@ -119,15 +120,21 @@ nav {
   transition: scale 0.2s linear, background-color 0.3s linear, color 0.4s linear;
 }
 
+.cartTrash{display: none;font-size: 20px;color: rgb(205, 29, 29);cursor: pointer;}
+
 .cart-button:hover{
   scale: 1.05;
   color: rgb(255, 200, 0);
   background-color: black;
 }
 
-.cartShop-div .book-card{width: 100px;}
-.cartShop-div .book-title{font-size: 10px;}
+.cartShop-div .book-card{width: 90%;flex-direction: row;height: 100px;justify-content: space-between; align-items: center;}
+.cartShop-div .book-title{font-size: 12px;max-width: 33%;height: 90%;overflow: hidden;display: flex;justify-content: center;align-items: center;color: rgb(51, 47, 41);}
 .cartShop-div .cart-button{display: none;}
+.cartShop-div .cartTrash{display: block;}
+.cartShop-div .img-container{width: 120px;}
+.cartShop-div span{color: orange;margin-left: 10px;}
+
 
 .hidden {
   visibility: hidden;
@@ -136,3 +143,10 @@ nav {
   height: 0;
   overflow: hidden;
 }
+
+.button { 
+  font-size: 1rem; text-transform: uppercase; background: #0088ff; color:#fff;
+  text-decoration: none;padding: 14px 25px; display: inline-block;
+  border-radius: 980px; font-weight: 700;border: none;cursor: pointer;
+}
+.button:hover{ background: #444; }

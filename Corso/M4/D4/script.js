@@ -29,6 +29,11 @@ function book() {
         button.classList.add("cart-button");
         button.textContent = "Aggiungi al carrello";
 
+        const icon = document.createElement("i");
+        icon.classList.add("cartTrash");
+        const iconTrash = document.createElement("ion-icon")
+        iconTrash.name = "trash-outline"
+
         button.addEventListener("click", function () {
           const spanPlus = document.querySelector(".spanUp");
           const spanPlus2 = document.querySelector(".spanUp2");
@@ -41,10 +46,22 @@ function book() {
           newParent.appendChild(contImg)
         });
 
+        icon.addEventListener("click", function(){
+            const spanPlus = document.querySelector(".spanUp");
+          const spanPlus2 = document.querySelector(".spanUp2");
+          let currentNumber = Number(spanPlus.innerText);
+          let currentNumber2 = Number(spanPlus2.innerText);
+          spanPlus.innerText = currentNumber - 1;
+          spanPlus2.innerText = currentNumber2 - 1;
+        risultatiRicerca.appendChild(contImg);
+        })
+
         imgContainer.appendChild(immagine);
         contImg.appendChild(imgContainer);
         contImg.appendChild(par);
         contImg.appendChild(button);
+        icon.appendChild(iconTrash)
+        contImg.appendChild(icon)
         risultatiRicerca.appendChild(contImg);
       });
 
