@@ -31,8 +31,8 @@ function book() {
 
         const icon = document.createElement("i");
         icon.classList.add("cartTrash");
-        const iconTrash = document.createElement("ion-icon")
-        iconTrash.name = "trash-outline"
+        const iconTrash = document.createElement("ion-icon");
+        iconTrash.name = "trash-outline";
 
         button.addEventListener("click", function () {
           const spanPlus = document.querySelector(".spanUp");
@@ -42,26 +42,39 @@ function book() {
           spanPlus.innerText = currentNumber + 1;
           spanPlus2.innerText = currentNumber2 + 1;
 
-          const newParent = document.querySelector('.cartShop')
-          newParent.appendChild(contImg)
+          const newParent = document.querySelector(".cartShop");
+          newParent.appendChild(contImg);
         });
 
-        icon.addEventListener("click", function(){
-            const spanPlus = document.querySelector(".spanUp");
+        icon.addEventListener("click", function () {
+          const spanPlus = document.querySelector(".spanUp");
           const spanPlus2 = document.querySelector(".spanUp2");
           let currentNumber = Number(spanPlus.innerText);
           let currentNumber2 = Number(spanPlus2.innerText);
           spanPlus.innerText = currentNumber - 1;
           spanPlus2.innerText = currentNumber2 - 1;
-        risultatiRicerca.appendChild(contImg);
-        })
+          risultatiRicerca.appendChild(contImg);
+        });
+
+        const deleteAllBtn = document.querySelector(".tAll");
+
+        deleteAllBtn.addEventListener("click", function () {
+          const spanPlus = document.querySelector(".spanUp");
+          const spanPlus2 = document.querySelector(".spanUp2");
+          spanPlus.innerText = 0;
+          spanPlus2.innerText = 0;
+          const newParent = document.querySelector(".cartShop");
+          while (newParent.firstChild) {
+            risultatiRicerca.appendChild(newParent.firstChild);
+          }
+        });
 
         imgContainer.appendChild(immagine);
         contImg.appendChild(imgContainer);
         contImg.appendChild(par);
         contImg.appendChild(button);
-        icon.appendChild(iconTrash)
-        contImg.appendChild(icon)
+        icon.appendChild(iconTrash);
+        contImg.appendChild(icon);
         risultatiRicerca.appendChild(contImg);
       });
 
@@ -72,7 +85,9 @@ function book() {
         const searchValue = searchInput.value.trim().toLowerCase();
 
         allCards.forEach((card) => {
-          const title = card.querySelector(".book-title").innerText.toLowerCase();
+          const title = card
+            .querySelector(".book-title")
+            .innerText.toLowerCase();
 
           if (searchValue.length < 3) {
             card.classList.remove("hidden");

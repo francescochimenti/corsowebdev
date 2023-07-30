@@ -1,5 +1,5 @@
 /* ! Reset */
-body, html{ font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{list-style-type: none;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 1.5rem;margin-top: 10px;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
+body, html{ font-family: 'Poppins', Arial, Helvetica, sans-serif; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{list-style-type: none;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 1.5rem;margin-top: 10px;display: flex;align-items: center; justify-content: center;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
 
 /* ! Navbar */
 
@@ -81,6 +81,7 @@ nav {
 
 .book-card{
     width: 200px;
+    height: fit-content;
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
@@ -133,7 +134,8 @@ nav {
 .cartShop-div .cart-button{display: none;}
 .cartShop-div .cartTrash{display: block;}
 .cartShop-div .img-container{width: 120px;}
-.cartShop-div span{color: orange;margin-left: 10px;}
+.cartShop-div span:first-of-type{color: orange;margin-left: 10px;}
+.tAll{color: red;font-size: 30px;margin-top: 8px;margin-left: 8px;cursor: pointer;}
 
 
 .hidden {
