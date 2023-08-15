@@ -9,8 +9,8 @@ const print = async (risultato) => {
     }
     const data = await res.json();
     
-    const bookDetails = document.getElementById("detailsDiv");
-    bookDetails.innerHTML = `<div class="book-card">
+    const book = document.getElementById("detailsDiv");
+    book.innerHTML = `<div class="book-card">
       <div class="img-container">
         <img class="book-img" src="${data.img}" alt="">
       </div>
