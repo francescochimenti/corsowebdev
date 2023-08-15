@@ -29,6 +29,11 @@ function book() {
         button.classList.add("cart-button");
         button.textContent = "Aggiungi al carrello";
 
+        const buttonTwo = document.createElement("a");
+        buttonTwo.classList.add("view-button");
+        buttonTwo.textContent = "Visualizza";
+        buttonTwo.href = `detail.html?asin=${risultato.asin}`;
+
         const icon = document.createElement("i");
         icon.classList.add("cartTrash");
         const iconTrash = document.createElement("ion-icon");
@@ -73,6 +78,7 @@ function book() {
         contImg.appendChild(imgContainer);
         contImg.appendChild(par);
         contImg.appendChild(button);
+        contImg.appendChild(buttonTwo);
         icon.appendChild(iconTrash);
         contImg.appendChild(icon);
         risultatiRicerca.appendChild(contImg);

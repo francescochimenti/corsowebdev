@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Filter App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+</head>
+<body class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 font-sans">
+    <div class="container mx-auto mb-10 mt-10 p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInDown">
+        <h1 class="text-6xl text-center text-black mb-12 font-extrabold tracking-wide animate__animated animate__fadeIn">User Filter App</h1>
+        
+        <div class="flex items-center space-x-4 mb-10">
+            <label for="filterDropdown" class="text-white font-semibold text-lg">Filter By:</label>
+            <select id="filterDropdown" class="px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-pink-400">
+                <option value="name">Name</option>
+                <option value="username">Username</option>
+                <option value="email">Email</option>
+            </select>
+            <input type="text" id="filterInput" class="px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-pink-400" placeholder="Enter filter value">
+        </div>
+        
+        <table class="table-auto w-full">
+            <thead>
+                <tr class="bg-pink-600 text-white">
+                    <th class="py-3 px-4">Name</th>
+                    <th class="py-3 px-4">Username</th>
+                    <th class="py-3 px-4">Email</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+            const userTableBody = document.getElementById('userTableBody');
+            const filterDropdown = document.getElementById('filterDropdown');
+            const filterInput = document.getElementById('filterInput');
+
+            async function fetchUsers() {
+                const response = await fetch(apiUrl);
+                const users = await response.json();
+                
+                userTableBody.innerHTML = '';
+                users.forEach(user => {
+                    userTableBody.innerHTML += `
+                        <tr class="transition duration-300 ease-in-out transform hover:scale-105">
+                            <td class="py-3 px-4">${user.name}</td>
+                            <td class="py-3 px-4">${user.username}</td>
+                            <td class="py-3 px-4">${user.email}</td>
+                        </tr>
+                    `;
+                });
+            }
+            
+            await fetchUsers();
+            
+            filterInput.addEventListener('input', async function () {
+                const filterBy = filterDropdown.value;
+                const filterValue = filterInput.value.toLowerCase();
+                
+                const response = await fetch(apiUrl);
+                const users = await response.json();
+                
+                userTableBody.innerHTML = '';
+                users.forEach(user => {
+                    if (user[filterBy].toLowerCase().includes(filterValue)) {
+                        userTableBody.innerHTML += `
+                            <tr class="transition duration-300 ease-in-out transform hover:scale-105">
+                                <td class="py-3 px-4">${user.name}</td>
+                                <td class="py-3 px-4">${user.username}</td>
+                                <td class="py-3 px-4">${user.email}</td>
+                            </tr>
+                        `;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -121,6 +121,20 @@ nav {
   transition: scale 0.2s linear, background-color 0.3s linear, color 0.4s linear;
 }
 
+.view-button{
+  border: 0;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+  box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+  background-color: rgb(255, 0, 0);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
 .cartTrash{display: none;font-size: 20px;color: rgb(205, 29, 29);cursor: pointer;}
 
 .cart-button:hover{
@@ -152,3 +166,10 @@ nav {
   border-radius: 980px; font-weight: 700;border: none;cursor: pointer;
 }
 .button:hover{ background: #444; }
+
+#detailsDiv {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
